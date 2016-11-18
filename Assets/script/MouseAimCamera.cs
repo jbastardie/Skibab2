@@ -13,7 +13,7 @@ public class MouseAimCamera : MonoBehaviour
     public float yMinLimit = -20f;
     public float yMaxLimit = 80f;
 
-    public float distanceMin = .5f;
+    public float distanceMin = 1f;
     public float distanceMax = 15f;
 
     public float smoothTime = 2f;
@@ -62,6 +62,7 @@ public class MouseAimCamera : MonoBehaviour
 
             Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
             Vector3 position = rotation * negDistance + target.position;
+            position = position + new Vector3(-0.5f, 1f,0.0f);
 
             transform.rotation = rotation;
             transform.position = position;
@@ -75,6 +76,18 @@ public class MouseAimCamera : MonoBehaviour
             Cursor.visible = true;
         }
 
+    }
+
+    void Update()
+    {
+        if (Input.GetAxis("Mouse ScrollWheel") < 0f) // forward
+ {
+            distance = distance + 0.5f;
+        }
+        if (Input.GetAxis("Mouse ScrollWheel") > 0f) // back
+ {
+            distance = distance -0.5f;
+        }
     }
 
     public static float ClampAngle(float angle, float min, float max)
