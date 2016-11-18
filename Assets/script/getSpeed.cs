@@ -11,6 +11,8 @@ public class getSpeed : MonoBehaviour {
     // Use this for initialization
     void Start () {
         animationObj = snowboarder.GetComponent<Animator>();
+        //animationObj.Stop();
+        //animationObj.enabled = false;
         //animationObj.Play("base");
         //animationObj.Play("Back_Stab_Grab_Down_Finish_01_001");
     }

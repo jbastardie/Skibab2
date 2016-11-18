@@ -86,6 +86,7 @@
      <Compile Include="Assets\script\controllerCharacter.cs" />
      <Compile Include="Assets\script\customMoveController.cs" />
      <Compile Include="Assets\script\getSpeed.cs" />
+     <Compile Include="Assets\script\perpendicularBody.cs" />
      <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
      <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
