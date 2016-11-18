@@ -12,9 +12,7 @@ public class getSpeed : MonoBehaviour {
     void Start () {
         animationObj = snowboarder.GetComponent<Animator>();
         //animationObj.Stop();
-        //animationObj.enabled = false;
         //animationObj.Play("base");
-        //animationObj.Play("Back_Stab_Grab_Down_Finish_01_001");
     }
 	
 	// Update is called once per frame
@@ -25,12 +23,12 @@ public class getSpeed : MonoBehaviour {
         if (speed > 5)
         {
             
-            animationObj.CrossFade("highSpeed", 0.5f);
+            //animationObj.CrossFade("highSpeed", 0.5f);
         }
 
-       // if (Input.GetKeyDown(KeyCode.E))
-        //{
-          //  animationObj.CrossFade("dance", 0.5f);
-        //}
+       if (Input.GetKeyDown(KeyCode.E))
+        {
+            animationObj.enabled = true;
+        }
     }
 }
