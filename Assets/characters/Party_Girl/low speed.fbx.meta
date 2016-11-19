@@ -157,6 +157,7 @@ ModelImporter:
     4300010: 5
     7400000: mixamo.com
     9500000: //RootNode
+    11100000: //RootNode
     13700000: 0
     13700002: 1
     13700004: 2
@@ -174,10 +175,7 @@ ModelImporter:
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
-    animationImportWarnings: "\nClip 'mixamo.com' has import animation warnings that
-      might lower retargeting quality:\nNote: Activate translation DOF on avatar to
-      improve retargeting quality.\n\t'mixamorig:Spine2' is inbetween humanoid transforms
-      and has rotation animation that will be discarded.\n"
+    animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     animationCompression: 3
@@ -192,11 +190,11 @@ ModelImporter:
       takeName: mixamo.com
       firstFrame: 0
       lastFrame: 30
-      wrapMode: 0
+      wrapMode: 2
       orientationOffsetY: 0
       level: 0
       cycleOffset: 0
-      loop: 0
+      loop: 1
       hasAdditiveReferencePose: 0
       loopTime: 1
       loopBlend: 0

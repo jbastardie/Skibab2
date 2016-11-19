@@ -7,28 +7,34 @@ public class perpendicularBody : MonoBehaviour {
     public Rigidbody rigidbody;
     public GameObject snowboarder;
     Animator animationObj;
-
+    
     void Start () {
         animationObj = snowboarder.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update() {
-
-        //transform.up.Set(-rigidbody.rotation.x, 0, -rigidbody.rotation.z);
-        transform.rotation = Quaternion.Euler(0, rigidbody.transform.eulerAngles.y+40, 0);
+        //cancel z rotation
+        //rigidbody.transform.rotation = Quaternion.Euler(rigidbody.transform.rotation.eulerAngles.x, rigidbody.transform.rotation.eulerAngles.y, 0);
+        transform.rotation = Quaternion.Euler(3, rigidbody.transform.eulerAngles.y+40, 0);
         //transform.rotation(rigidbody.rotation.x, 0, rigidbody.rotation.z);
         //transform.eulerAngles.Set(0,transform.eulerAngles.y,0);
 
         //Debug.Log(transform.eulerAngles.z);
-
-        if( 20 < Mathf.Abs(rigidbody.transform.eulerAngles.x)|| 10 < Mathf.Abs(rigidbody.transform.eulerAngles.z))
-        {
+        Debug.Log(rigidbody.transform.rotation.eulerAngles.x);
+        if ( 7 < Mathf.Abs(rigidbody.transform.rotation.eulerAngles.x) && 353 > Mathf.Abs(rigidbody.transform.rotation.eulerAngles.x))
+        {       
             animationObj.enabled = false;
         }
-        else
+        else 
         {
             animationObj.enabled = true;
         }
+
+    }
+
+    void FixedUpdate()
+    {
+        rigidbody.transform.rotation = Quaternion.Euler(rigidbody.transform.rotation.eulerAngles.x, rigidbody.transform.rotation.eulerAngles.y, 0);
     }
 }
