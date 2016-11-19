@@ -28,7 +28,7 @@ public class getSpeed : MonoBehaviour {
 
        if (Input.GetKeyDown(KeyCode.E))
         {
-            animationObj.enabled = true;
+            //animationObj.enabled = true;
         }
     }
 }
